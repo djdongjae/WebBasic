@@ -4,9 +4,12 @@
     <title>WEB1 - Welcome</title>
     <meta charset="utf-8">
     <style>
-      a {
-        color:black;
-        text-decoration: none;
+      #grid {
+        display: grid;
+        grid-template-columns: 158.67px 1fr;
+      }
+      #article {
+        padding-left: 25px;
       }
       h1 {
         font-size: 45px;
@@ -15,18 +18,36 @@
         margin:0;
         padding:20px;
       }
+      #title a {
+        color: black;
+        text-decoration-line: none;
+      }
+      #grid ol {
+        border-right:1px solid gray;
+        width:100px;
+        margin:0;
+        padding:20px;
+        padding-left: 38px;
+      }
+      body {
+        margin:0;
+      }
     </style>
   </head>
   <body>
-    <h1><a href="index.html">WEB</a></h1>
-    <ol>
-      <li><a href="01_html_page.html">HTML</a></li>
-      <li><a href="02_CSS_page.html">CSS</a></li>
-      <li><a href="03_JavaScript_page.html">JavaScript</a></li>
-    </ol>
-    <h2>WEB이란 무엇인가?</h2>
-    <p>
-      The World Wide Web (WWW), commonly known as the Web, is an information system enabling documents and other web resources to be accessed over the Internet.
-    </p>
+    <div id="title"><h1><a href="index.html">WEB</a></h1></div>
+    <div id="grid">
+      <ol>
+        <li><a href="01_html_page.html">HTML</a></li>
+        <li><a href="02_CSS_page.html">CSS</a></li>
+        <li><a href="03_JavaScript_page.html">JavaScript</a></li>
+      </ol>
+      <div id="article">
+        <h2>WEB이란 무엇인가?</h2>
+        <p>
+          The World Wide Web (WWW), commonly known as the Web, is an information system enabling documents and other web resources to be accessed over the Internet.
+        </p>
+      </div>
+    </div>
   </body>
 </html>
