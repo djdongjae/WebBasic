@@ -5,34 +5,38 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="style.css">
     <script>
-      function nightDayHandler(self){
+      function setLinksColor(color){
+        var alist = document.querySelectorAll('a');
+        var i = 1;
+        while(i < alist.length){
+          alist[i].style.color = color;
+          i = i + 1;
+        }
+      }
+      function BodySetColor(color){
+        document.querySelector('body').style.color = color;
+      }
+      function BodySetBackgroundColor(color){
+        document.querySelector('body').style.backgroundColor = color;
+      }
+      function nightDayHandler(self) {
         var target = document.querySelector('body');
         if(self.value === 'night'){
-          target.style.backgroundColor = 'black';
-          target.style.color = 'white';
+          BodySetBackgroundColor('black');
+          BodySetColor('white');
           document.querySelector('#title a').style.color = 'white';
           self.value = 'day';
 
-          var alist = document.querySelectorAll('a');
-          var i = 1;
-          while(i < alist.length){
-            alist[i].style.color = 'powderblue';
-            i = i + 1;
-          }
-        } else {
-          target.style.backgroundColor = 'white';
-          target.style.color = 'black';
+          setLinksColor('powderblue');
+          } else {
+          BodySetBackgroundColor('white');
+          BodySetColor('black');
           document.querySelector('#title a').style.color = 'black';
           self.value = 'night';
 
-          var alist = document.querySelectorAll('a');
-          var i = 1;
-          while(i < alist.length){
-            alist[i].style.color = 'blue';
-            i = i + 1;
+          setLinksColor('blue');
           }
         }
-      }
     </script>
   </head>
   <body>
