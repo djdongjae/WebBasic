@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>제목</title>
+    <style>
+    </style>
+</head>
+<body>
+   <h2 id="hello1">안녕하세요</h2>
+   <h2 id="me">메</h2>
+   <h1 id="hello2">성공회</h1>
+   <script>
+    /*
+        1.바꾸고 싶은 HTML 요소의 id 여기에 적구
+        2.뭐 바꿀지 뒤에 적음
+        3. 결론 : 빈칸만 잘 채우면 뭐든 원하는대로 변경 가능
+        
+        HTML 요소의 색상 사이즈 마진 패딩 등 상상하는 모든것 
+       
+        */
+       document.getElementById('hello1').innerHTML='안녕';
+       document.getElementById('me').innerHTML='바밤';
+       document.getElementById('hello1').style.fontSize='70px';
+       document.getElementById('hello1').style.color='red';
+       /* 문제1. <h1 id="hello2">성공회</h1> 성공회를 성공회대학교로 글자색상은 파랑색으로 글자 사이즈를 30px로 바꾸려면 */
+    </script>
+</body>
+</html>
